@@ -9,19 +9,16 @@
 </head>
 <body>
     <div id="app">
-        <button @click="todos.push()">Add Todo
-            <input type="text">
-        </button><br>
-        <button>Delete Todo
-            <input type="text">
-        </button><br>
-        <button>Edit Todo
-            <input type="text">
-        </button><br>
+        <form v-on:submit.prevent="addTodo">
+            <input v-model="todos.todo">
+            <button type="submit">Add todo</button>
+        </form>
+        <hr>
+    
 
         <ul>
             <li v-for="(todo) in todos">
-                <p>{{ todo }}</p>
+                {{ todos.todo }}
             </li>
         </ul>
 

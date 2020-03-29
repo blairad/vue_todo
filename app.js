@@ -2,12 +2,17 @@ new Vue({
     el: "#app",
 
     data: {
-        todos: []
+        todos: [],
+        todo: {}
+        
     },
 
     methods: {
-        addTodo: function(){
-            
+        addTodo(){
+            let newTodo = {
+                task: this.todo.task
+            }
+            this.todos.push(newTodo)
         }
     }
 })
