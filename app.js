@@ -8,10 +8,15 @@ new Vue({
     },
 
     methods: {
-        addTodo(){
+        addTodo: function(){
             let todo = this.todo;
-            this.todos.push(todo)
+            this.todos.push(todo);
             this.todo = ''
+        },
+        deleteTodo: function(todo){
+            let index = this.todos.indexOf(todo)
+            this.todos.splice(index, 1)
         }
+        
     }
 })
