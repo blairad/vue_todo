@@ -3,16 +3,15 @@ new Vue({
 
     data: {
         todos: [],
-        todo: {}
+        todo: ''
         
     },
 
     methods: {
         addTodo(){
-            let newTodo = {
-                task: this.todo.task
-            }
-            this.todos.push(newTodo)
+            let todo = this.todo;
+            this.todos.push(todo)
+            this.todo = ''
         }
     }
 })

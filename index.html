@@ -10,15 +10,15 @@
 <body>
     <div id="app">
         <form v-on:submit.prevent="addTodo">
-            <input v-model="todos.todo">
+            <input v-model="todo"/>
             <button type="submit">Add todo</button>
         </form>
         <hr>
     
 
         <ul>
-            <li v-for="(todo) in todos">
-                {{ todos.todo }}
+            <li v-for="todo in todos">
+                {{ todo }}
             </li>
         </ul>
 
