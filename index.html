@@ -17,10 +17,10 @@
     
 
         <ul>
-            <li v-for="todo in todos">
+            <li v-for="(todo, index) in todos">
                 <!-- <input type="checkbox" id="completed-todo" v-model="completed"> -->
                 {{ todo }}
-                <button v-on:click="deleteTodo()">delete</button>
+                <button @click="deleteTodo(todo, index)">delete</button>
             </li>
         </ul>
 
